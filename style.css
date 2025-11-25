@@ -1,88 +1,133 @@
-/* Base */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ------------------------------
+   Global Styles
+--------------------------------*/
+* {
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  box-sizing: border-box;
 }
 
-/* Container */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f7f9fc;
+  color: #2c2c2c;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/* Center the whole page nicely */
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 1rem;
 }
 
-/* Intro Section */
+/* ------------------------------
+   Intro Section
+--------------------------------*/
 .intro-section {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 16px;
   display: flex;
+  gap: 2.5rem;
   align-items: center;
-  gap: 2rem;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  flex-wrap: wrap;
+  
+  /* Smooth soft shadow */
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07);
+  
+  transition: transform 0.3s ease;
 }
 
-/* Profile Picture */
+/* Slight lift on hover */
+.intro-section:hover {
+  transform: translateY(-5px);
+}
+
+/* ------------------------------
+   Profile Picture
+--------------------------------*/
 .profile-pic-wrapper {
-  flex: 0 0 150px;
+  flex: 0 0 180px;
+  display: flex;
+  justify-content: center;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+  /* Soft circular shadow */
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* Name and Bio */
+/* ------------------------------
+   Right Side (Name + Bio)
+--------------------------------*/
 .name-bio {
   flex: 1;
 }
 
 .name-bio h1 {
-  font-size: 2rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1e3a8a; /* deep academic blue */
   margin-bottom: 0.5rem;
 }
 
 .bio {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  margin: 1rem 0 1.5rem 0;
+  color: #444444;
 }
 
-/* Social Links */
+/* ------------------------------
+   Social Links
+--------------------------------*/
+.social-links {
+  margin-top: 1rem;
+}
+
 .social-links a {
   display: inline-block;
   margin-right: 1rem;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .social-links img {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  transition: transform 0.2s;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
 }
 
-.social-links img:hover {
-  transform: scale(1.2);
+.social-links a:hover {
+  transform: scale(1.15);
+  opacity: 0.85;
 }
 
-/* Responsive */
-@media (max-width: 700px) {
+/* ------------------------------
+   Responsive Design
+--------------------------------*/
+@media (max-width: 780px) {
   .intro-section {
     flex-direction: column;
-    align-items: center;
     text-align: center;
+    padding: 2.5rem 1.5rem;
   }
+
   .profile-pic-wrapper {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
+
   .name-bio h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .profile-pic {
+    width: 140px;
+    height: 140px;
   }
 }
