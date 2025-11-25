@@ -232,7 +232,7 @@ body {
 
 .degree-card {
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.65); /* glassy card */
   backdrop-filter: blur(6px);
@@ -274,7 +274,7 @@ body {
 
 .experience-card {
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.65); /* glassy look */
   backdrop-filter: blur(6px);
