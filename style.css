@@ -260,9 +260,8 @@ body {
   color: #000;
 }
 
-/* Reuse degree-card style for experience cards */
-/* Container for experience cards */
-.experience-container {
+/*For experience section */
+.experience-section {
   display: flex;
   flex-direction: column;   /* stack vertically */
   align-items: center;      /* center horizontally */
