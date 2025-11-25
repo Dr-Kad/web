@@ -19,22 +19,22 @@ body {
   padding: 2rem;
 }
 
-/* Center Content */
+/* Page Container */
 .container {
   max-width: 900px;
   margin: 0 auto;
 }
 
 /* ------------------------------
-   Intro Section (GLASS EFFECT)
+   Intro Section - Frosted Glass Card
 --------------------------------*/
 .intro-section {
   padding: 3rem 2rem;
 
   /* Frosted Glass Effect */
-  background: rgba(255, 255, 255, 0.25);   /* Semi-transparent */
-  backdrop-filter: blur(12px);             /* Glass Blur */
-  -webkit-backdrop-filter: blur(12px);     /* Safari Support */
+  background: rgba(255, 255, 255, 0.25); 
+  backdrop-filter: blur(12px) brightness(1.1);
+  -webkit-backdrop-filter: blur(12px) brightness(1.1);
 
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -68,11 +68,12 @@ body {
   border-radius: 50%;
   object-fit: cover;
 
+  /* Soft circular shadow */
   box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
 }
 
 /* ------------------------------
-   Text Area
+   Right Side: Name + Bio
 --------------------------------*/
 .name-bio {
   flex: 1;
@@ -81,19 +82,17 @@ body {
 .name-bio h1 {
   font-size: 2.6rem;
   font-weight: 700;
-  color: #ffffff; /* White text looks good on background */
-  text-shadow: 0px 2px 6px rgba(0,0,0,0.4);
+  color: #222;         /* BLACK text */
 }
 
 .bio {
   font-size: 1.15rem;
   margin: 1rem 0 1.5rem;
-  color: #f0f0f0;
-  text-shadow: 0px 1px 4px rgba(0,0,0,0.4);
+  color: #333;         /* dark grey = readable */
 }
 
 /* ------------------------------
-   Social Icons
+   Social Links
 --------------------------------*/
 .social-links a {
   display: inline-block;
@@ -101,10 +100,11 @@ body {
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-social-links img {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+/* Smaller icons (reduced size) */
+.social-links img {
+  width: 28px;  
+  height: 28px;
+  border-radius: 6px;
 }
 
 .social-links a:hover {
@@ -113,7 +113,7 @@ social-links img {
 }
 
 /* ------------------------------
-   Responsive
+   Responsive Design
 --------------------------------*/
 @media (max-width: 780px) {
   .intro-section {
@@ -128,5 +128,12 @@ social-links img {
 
   .name-bio h1 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .profile-pic {
+    width: 140px;
+    height: 140px;
   }
 }
