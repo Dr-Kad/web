@@ -205,7 +205,7 @@ body {
 .page-header {
   text-align: center;
   padding: 40px 20px;
-  background-color: rgba(255, 255, 255, 0.05); /* slight glassy look */
+  background-color: rgba(255, 255, 255, 0.65); /* slight glassy look */
   backdrop-filter: blur(8px);
   color: #000; /* black text */
   margin-bottom: 30px;
@@ -234,7 +234,7 @@ body {
   width: 100%;
   max-width: 600px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.1); /* glassy card */
+  background: rgba(255, 255, 255, 0.65); /* glassy card */
   backdrop-filter: blur(6px);
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
@@ -264,7 +264,7 @@ body {
   width: 100%;
   max-width: 600px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.1); /* glassy look */
+  background: rgba(255, 255, 255, 0.65); /* glassy look */
   backdrop-filter: blur(6px);
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
