@@ -256,10 +256,33 @@ body {
   text-align: center;
   font-size: 2em;
   margin: 40px 0 20px 0;
+  border-radius: 12 px;
   color: #000;
 }
 
 /* Reuse degree-card style for experience cards */
+/* Container for experience cards */
+.experience-container {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;      /* center horizontally */
+  gap: 20px;                /* space between cards */
+  padding: 0 20px 40px 20px;
+  width: 100%;
+}
+
+/* Experience card styling */
+.experience-card {
+  width: 100%;
+  max-width: 700px;          /* limit max width for readability */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+
 .experience-card {
   width: 100%;
   max-width: 600px;
