@@ -83,12 +83,14 @@ body {
 .name-bio h1 {
   font-size: 2.8rem;
   font-weight: 700;
+  margin-left: 50px;
   margin-bottom: 10px;
 }
 
 .name-bio h2 {
   font-size: 1.3rem;
   font-weight: 500;
+  margin-left: 50px;
   margin: 3px 0;
 }
 
@@ -102,6 +104,7 @@ body {
 .bio-section p {
   font-size: 1.2rem;
   color: #000;
+  justify-content: center;
   line-height: 1.6;
 }
 
