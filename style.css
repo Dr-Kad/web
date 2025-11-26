@@ -305,7 +305,7 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 12px;
   max-width: 1000px;
-  margin: 0 10px;
+  margin: 5px 5px;
   padding: 20px;
 }
 .experience-item {
