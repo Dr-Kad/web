@@ -180,7 +180,7 @@ body {
   align-items: center;
   justify-content: space-between; /* keeps links on the right */
   width: 100%;
-  padding: 0 3px; /* tiny padding on sides */
+  padding: 0 7px; /* tiny padding on sides */
   margin: 0;       /* remove auto margin */
 }
 
@@ -192,7 +192,7 @@ body {
   color: #222;
   text-decoration: none;
   margin-left: 2px;  /* make sure no left margin */
-  padding-left: 0; /* remove any padding */
+  padding-left: 3px; /* remove any padding */
 }
 
 .nav-links {
@@ -200,6 +200,7 @@ body {
   display: flex;
   gap: 2rem;
   margin-right: 2px;
+  padding-right: 3px;
 }
 
 .nav-links a {
@@ -302,14 +303,15 @@ body {
   width: 100%;
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
+  border-radius: 12px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 10px;
   padding: 20px;
 }
 .experience-item {
   width: 100%;
   padding: 15px 20px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(6px);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
