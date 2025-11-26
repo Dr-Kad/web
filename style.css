@@ -61,6 +61,17 @@ body {
   box-shadow: 0px 25px 55px rgba(0, 0, 0, 0.55);
 }
 
+/* Align profile picture and name on one row */
+.top-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
 /* ------------------------------
    Right Side: Name + Bio
 --------------------------------*/
@@ -116,6 +127,12 @@ body {
 
 .social-links img:hover {
   transform: scale(1.15);
+}
+
+/* Makes bio + links stay inside the frosted card */
+.inside-box {
+    width: 100%;
+    text-align: center;
 }
 
 
