@@ -287,13 +287,7 @@ body {
 
 /* Section Titles */
 .section-title {
-  display: flex;
   text-align: center;
-  font-size: 2em;
-  margin: 4px 0;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
 }
 
 /*For experience section */
