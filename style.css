@@ -231,7 +231,7 @@ body {
 .page-header {
   text-align: center;
   padding: 40px 20px;
-  background-color: rgba(255, 255, 255, 0.65); /* slight glassy look */
+  background-color: rgba(255, 255, 255, 0.4); /* slight glassy look */
   backdrop-filter: blur(8px);
   color: #000; /* black text */
   margin-bottom: 30px;
@@ -262,7 +262,7 @@ body {
 .degree-card {
   width: 100%;
   max-width: 1000px;
-  padding: 20px;
+  padding: 50px;
   background: rgba(255, 255, 255, 0.65); /* glassy card */
   backdrop-filter: blur(6px);
   border-radius: 12px;
@@ -285,12 +285,10 @@ body {
   display: flex;
   text-align: center;
   font-size: 2em;
-  margin: 40px 0 20px 0;
+  margin: 4px 0;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
-  padding: 0 20px 40px 20px;
-  color: #000;
 }
 
 /*For experience section */
@@ -303,6 +301,7 @@ body {
   backdrop-filter: blur(10px);
   padding: 0 20px 40px 20px;
   width: 100%;
+  border-radius: 12px;
 }
 
 
