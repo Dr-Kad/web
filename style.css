@@ -176,28 +176,30 @@ body {
 }
 
 .nav-container {
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
+  justify-content: space-between; /* keeps links on the right */
+  width: 100%;
+  padding: 0 3px; /* tiny padding on sides */
+  margin: 0;       /* remove auto margin */
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 2px;
   font-size: 1.6rem;
   font-weight: 700;
   color: #222;
   text-decoration: none;
+  margin-left: 2px;  /* make sure no left margin */
+  padding-left: 0; /* remove any padding */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin-right: 2px;
 }
 
 .nav-links a {
@@ -298,11 +300,12 @@ body {
   flex-direction: column;
   gap: 20px;       /* spacing between jobs */
   width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
-
 .experience-item {
   width: 100%;
   padding: 15px 20px;
