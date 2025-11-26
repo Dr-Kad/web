@@ -90,14 +90,12 @@ body {
   font-size: 1.3rem;
   font-weight: 500;
   margin: 3px 0;
-  color: #222;
 }
 
 
 .bio-section {
   width: 100%;
-  max-width: 900px;
-  margin: 30px auto;
+  margin: 10px 10px;
   /*text-align: center;*/
 }
 
