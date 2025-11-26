@@ -238,7 +238,7 @@ body {
   background-color: rgba(255, 255, 255, 0.4); /* slight glassy look */
   backdrop-filter: blur(8px);
   color: #000; /* black text */
-  margin-bottom: 30px;
+  margin: 40px 0;
   border-radius: 12px;
 }
 
@@ -261,7 +261,7 @@ body {
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
   padding: 0 20px 40px 20px;
-  margin: 4px 0;
+  margin-bottom: 40px;
 }
 
 .degree-card {
