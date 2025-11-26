@@ -98,7 +98,7 @@ body {
   width: 100%;
   max-width: 900px;
   margin: 30px auto;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .bio-section p {
