@@ -235,6 +235,7 @@ body {
   backdrop-filter: blur(8px);
   color: #000; /* black text */
   margin-bottom: 30px;
+  border-radius: 12px;
 }
 
 .page-header h1 {
@@ -279,10 +280,13 @@ body {
 
 /* Section Titles */
 .section-title {
+  display: flex;
   text-align: center;
   font-size: 2em;
   margin: 40px 0 20px 0;
   border-radius: 12px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
   color: #000;
 }
 
