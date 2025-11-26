@@ -169,6 +169,8 @@ body {
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
   font-size: 1.6rem;
   font-weight: 700;
   color: #222;
@@ -299,3 +301,15 @@ body {
   margin: 4px 0;
   font-size: 1em;
 }
+
+/* Small Profile Pic in Navbar */
+.nav-profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  vertical-align: middle;
+}
+
