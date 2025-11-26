@@ -177,16 +177,17 @@ body {
 
 .nav-container {
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2px;
+  padding: 0 10px;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
+  gap: 2px;
   font-size: 1.6rem;
   font-weight: 700;
   color: #222;
@@ -294,21 +295,37 @@ body {
 /*For experience section */
 .experience-section {
   display: flex;
-  flex-direction: column;   /* stack vertically */
-  align-items: center;      /* center horizontally */
-  gap: 20px;                /* space between cards */
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
-  padding: 20px 20px 20px 20px;
+  flex-direction: column;
+  gap: 20px;       /* spacing between jobs */
   width: 100%;
-  border-radius: 12px;
-  margin: 4px 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.experience-item h3,
-.experience-item h4,
+.experience-item {
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.experience-item h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.4em;
+}
+
+.experience-item h4 {
+  margin: 0 0 8px 0;
+  font-size: 1em;
+  color: #555;
+}
+
 .experience-item p {
-  margin: 2px 0; /* minimal vertical spacing */
+  margin: 2px 0;
+  font-size: 1em;
 }
 
 .experience-card {
