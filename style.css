@@ -91,7 +91,7 @@ body {
   font-size: 1.3rem;
   font-weight: 500;
   margin-left: 50px;
-  margin: 3px 0;
+  margin-bottom: 3px;
 }
 
 
@@ -104,7 +104,7 @@ body {
 .bio-section p {
   font-size: 1.2rem;
   color: #000;
-  justify-content: center;
+  text-align: justify;
   line-height: 1.6;
 }
 
@@ -193,7 +193,7 @@ body {
   color: #222;
   text-decoration: none;
   margin-left: 2px;  /* make sure no left margin */
-  padding-left: 3px; /* remove any padding */
+  padding-left: 8px; /* remove any padding */
 }
 
 .nav-links {
@@ -201,7 +201,7 @@ body {
   display: flex;
   gap: 2rem;
   margin-right: 2px;
-  padding-right: 3px;
+  padding-right: 8px;
 }
 
 .nav-links a {
