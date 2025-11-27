@@ -45,29 +45,36 @@ animateParticles();
 
 
 
+// Canvas setup
 const canvas = document.getElementById('fireworksCanvas');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+// Resize on window change
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
 let fireworks = [];
 
+// Firework class
 class Firework {
   constructor(x, y, color) {
-    this.x = x;
-    this.y = y;
     this.particles = [];
-    this.color = color;
     for (let i = 0; i < 20; i++) {
       this.particles.push({
-        x: this.x,
-        y: this.y,
+        x: x,
+        y: y,
         dx: (Math.random() - 0.5) * 5,
         dy: (Math.random() - 0.5) * 5,
         alpha: 1
       });
     }
+    this.color = color;
   }
+
   update() {
     this.particles.forEach(p => {
       p.x += p.dx;
@@ -76,6 +83,7 @@ class Firework {
     });
     this.particles = this.particles.filter(p => p.alpha > 0);
   }
+
   draw() {
     this.particles.forEach(p => {
       ctx.fillStyle = `rgba(${this.color},${p.alpha})`;
@@ -86,6 +94,7 @@ class Firework {
   }
 }
 
+// Animation loop
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   fireworks.forEach(f => {
@@ -95,20 +104,28 @@ function animate() {
   fireworks = fireworks.filter(f => f.particles.length > 0);
   requestAnimationFrame(animate);
 }
-
 animate();
 
-document.getElementById('likeBtn').addEventListener('click', () => {
+// Button click
+document.getElementById('likeBtn').addEventListener('click', (e) => {
   const colors = [
     "80,130,255", // blue
     "180, 80, 255", // violet
     "120, 255, 255" // cyan
   ];
+
+  // Use button position
+  const rect = e.target.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top + rect.height / 2;
+
+  // Fireworks burst at button location
   for (let i = 0; i < 5; i++) {
     fireworks.push(new Firework(
-      Math.random() * canvas.width,
-      Math.random() * canvas.height,
+      x + Math.random() * 50 - 25,
+      y + Math.random() * 50 - 25,
       colors[Math.floor(Math.random() * colors.length)]
     ));
   }
 });
+
