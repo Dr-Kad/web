@@ -545,7 +545,7 @@ button:hover, .contact-form button:hover {
 
 .nav-links a:hover {
   transform: scale(1.1);   /* small zoom effect */
-  color: rgba(30, 58, 138, 1);  /* optional color shift */
+  color: rgba(130, 58, 138, 1);  /* optional color shift */
 }
 
 .nav-links a:hover {
