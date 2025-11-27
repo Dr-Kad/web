@@ -401,49 +401,48 @@ body {
 
 
 /* Contact .html*/
-
-/* --------------------------------
-   Contact Page
-----------------------------------*/
-
+/* Contact Section Container */
 .contact-section {
-  width: 100%;
   display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+  justify-content: center; /* center the row */
+  padding: 40px 20px;
 }
 
-.contact-card {
+.contact-container {
+  display: flex;
+  gap: 30px; /* space between the boxes */
+  flex-wrap: wrap; /* stack on small screens */
+  justify-content: center;
   width: 100%;
-  max-width: 700px;
-  padding: 40px;
+  max-width: 1200px;
+}
+
+/* Individual cards */
+.contact-card {
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  text-align: center;
+  padding: 30px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  flex: 1 1 400px; /* flexible width, minimum 400px */
+  min-width: 300px;
 }
 
-.contact-card h2 {
-  margin-bottom: 20px;
-  font-size: 1.8rem;
+/* Optional: give form a slightly larger width */
+.contact-form-box {
+  flex: 1 1 500px; /* larger flex-basis for the form */
 }
 
-.contact-card p {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-}
-
+/* Social Icons inside the info box */
 .contact-socials {
-  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  gap: 25px;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .contact-socials img {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   transition: 0.25s ease;
 }
 
@@ -451,44 +450,11 @@ body {
   transform: scale(1.15);
 }
 
-/* Contact Form */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
+/* Responsive: stack vertically under 780px */
+@media (max-width: 780px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.2);
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(5px);
-  font-size: 1rem;
-  color: #000;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #1e3a8a;
-  box-shadow: 0 0 5px rgba(30,58,138,0.5);
-}
-
-.contact-form button {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  background-color: #1e3a8a;
-  color: #fff;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: 0.25s ease;
-}
-
-.contact-form button:hover {
-  background-color: #162c66;
-}
