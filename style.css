@@ -505,3 +505,37 @@ body {
   }
 }
 
+/* hover effects*/
+
+button, .contact-form button {
+  transition: all 0.3s ease;
+}
+
+button:hover, .contact-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  background-color: rgba(30, 58, 138, 1); /* slightly brighter */
+}
+
+.degree-card, .experience-card, .contact-card {
+  transition: all 0.3s ease;
+}
+
+.degree-card:hover, .experience-card:hover, .contact-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.profile-pic, .social-links img, .contact-socials img {
+  transition: all 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+
+.social-links img:hover, .contact-socials img:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
