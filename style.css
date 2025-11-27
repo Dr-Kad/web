@@ -17,6 +17,7 @@ body {
   color: #2c2c2c;
   line-height: 1.6;
   padding: 2rem;
+  padding-top: calc(2rem + 70px);
 }
 
 /* Page Container */
@@ -174,7 +175,13 @@ body {
   padding: 0.8rem 0;
   margin-bottom: 2rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
+
+
 
 .nav-container {
   display: flex;
@@ -216,6 +223,7 @@ body {
   font-size: 28px;
   cursor: pointer;
   color: #222;
+  z-index: 9999;
 }
 
 /* ------------------------------
@@ -242,6 +250,7 @@ body {
     gap: 1.3rem;
     border-radius: 12px;
     box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    z-index: 9999;
   }
 
   /* show when open */
