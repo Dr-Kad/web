@@ -539,3 +539,18 @@ button:hover, .contact-form button:hover {
   transform: scale(1.2) rotate(5deg);
 }
 
+.nav-links a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  transform: scale(1.1);   /* small zoom effect */
+  color: rgba(30, 58, 138, 1);  /* optional color shift */
+}
+
+.nav-links a:hover {
+  transform: scale(1.1);
+  color: rgba(30, 58, 138, 1);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
