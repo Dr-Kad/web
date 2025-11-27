@@ -324,6 +324,11 @@ body {
   margin: 5px 5px;
   padding: 7.5px;
 }
+
+.experience-section p{
+  text-align: justify;
+}
+
 .experience-item {
   width: 100%;
   padding: 15px 20px;
@@ -347,6 +352,7 @@ body {
 .experience-item p {
   margin: 2px 0;
   font-size: 1em;
+  text-align: justify;
 }
 
 .experience-card {
