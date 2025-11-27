@@ -216,7 +216,7 @@ body {
 
 /* Hamburger icon */
 .hamburger {
-  display: block;
+  display: None;
   font-size: 28px;
   cursor: pointer;
   color: #222;
@@ -229,6 +229,11 @@ body {
   /* show menu button */
   .hamburger {
     display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #222;
+    position: relative; /* make z-index work */
+    z-index: 10001; 
   }
 
   /* hide desktop menu */
