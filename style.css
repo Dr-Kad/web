@@ -212,20 +212,18 @@ body {
   font-weight: 500;
 }
 
-/* Hamburger icon — hidden on desktop */
+/* Hamburger icon */
 .hamburger {
   display: none;
   font-size: 28px;
   cursor: pointer;
   color: #222;
-  z-index: 9999;
+  position: relative; /* make z-index work */
+  z-index: 10000;     /* above everything else */
 }
 
-/* ------------------------------
-   Mobile Navigation (≤ 760px)
---------------------------------*/
+/* Mobile Navigation (≤ 760px) */
 @media (max-width: 760px) {
-
   /* show menu button */
   .hamburger {
     display: block;
@@ -245,7 +243,9 @@ body {
     gap: 1.3rem;
     border-radius: 12px;
     box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-    z-index: 9999;
+
+    position: fixed;   /* fix to viewport */
+    z-index: 99999;    /* ensure it is on top of everything */
   }
 
   /* show when open */
