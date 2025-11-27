@@ -163,48 +163,6 @@ body {
   }
 }
 
-/* Mobile Navbar */
-@media (max-width: 760px) {
-
-  .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 15px;
-  }
-
-  /* Hide menu by default */
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    text-align: center;
-    padding: 20px 0;
-    gap: 1.5rem;
-    display: none;       /* hidden by default */
-    border-radius: 0 0 12px 12px;
-  }
-
-  /* Show when hamburger clicked */
-  .nav-links.open {
-    display: flex;
-  }
-
-  /* Show hamburger */
-  .hamburger {
-    display: block;
-  }
-
-  /* Reduce spacing */
-  .nav-links a {
-    font-size: 1.1rem;
-  }
-}
-
-
 /* ------------------------------
    Navigation Bar
 --------------------------------*/
@@ -212,7 +170,6 @@ body {
   width: 100%;
   background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 0.8rem 0;
   margin-bottom: 2rem;
@@ -222,12 +179,12 @@ body {
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* keeps links on the right */
+  justify-content: space-between;
+  padding: 0 10px;
   width: 100%;
-  padding: 0 7px; /* tiny padding on sides */
-  margin: 0;       /* remove auto margin */
 }
 
+/* Logo left */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -235,16 +192,15 @@ body {
   font-weight: 700;
   color: #222;
   text-decoration: none;
-  margin-left: 2px;  /* make sure no left margin */
-  padding-left: 8px; /* remove any padding */
+  margin-left: 0;
 }
 
+/* Links right (desktop) */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin-right: 2px;
-  padding-right: 8px;
+  margin-right: 5px;
 }
 
 .nav-links a {
@@ -252,15 +208,9 @@ body {
   color: #222;
   font-size: 1.05rem;
   font-weight: 500;
-  transition: color 0.25s ease;
 }
 
-.nav-links a:hover {
-  color: #1e3a8a;
-}
-
-
-/* Hamburger icon styling */
+/* Hamburger icon — hidden on desktop */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -268,20 +218,38 @@ body {
   color: #222;
 }
 
-
-/* Responsive Navbar */
+/* ------------------------------
+   Mobile Navigation (≤ 760px)
+--------------------------------*/
 @media (max-width: 760px) {
+
+  /* show menu button */
+  .hamburger {
+    display: block;
+  }
+
+  /* hide desktop menu */
   .nav-links {
-    gap: 1rem;
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: rgba(255,255,255,0.95);
+    width: 230px;
+    padding: 20px 0;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.3rem;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  }
+
+  /* show when open */
+  .nav-links.open {
+    display: flex;
   }
 }
 
-@media (max-width: 500px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-}
 
 
 /* Page header */
