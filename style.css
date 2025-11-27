@@ -538,15 +538,53 @@ body {
 
 /* hover effects*/
 
-button, .contact-form button {
+/* -----------------------------------------
+   GLOBAL BUTTON HOVER + PLASMA GLOW EFFECT
+------------------------------------------- */
+button,
+.contact-form button {
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-button:hover, .contact-form button:hover {
+button:hover,
+.contact-form button:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   background-color: rgba(30, 58, 138, 1); /* slightly brighter */
 }
+
+/* Glow pulse effect */
+button:hover::before,
+.contact-form button:hover::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(80,130,255,0.4), transparent 60%);
+  animation: glowPulse 0.6s ease-out;
+}
+
+@keyframes glowPulse {
+  from {
+    transform: scale(0.5);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+
+@keyframes glowPulse {
+  from { transform: scale(0.5); opacity: 1; }
+  to { transform: scale(1.5); opacity: 0; }
+}
+
 
 .degree-card, .experience-card, .contact-card {
   transition: all 0.3s ease;
@@ -595,3 +633,5 @@ button:hover, .contact-form button:hover {
   z-index: -10;
   background: transparent;
 }
+
+
