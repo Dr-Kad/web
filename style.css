@@ -633,39 +633,3 @@ button:hover::before,
   z-index: -10;
   background: transparent;
 }
-
-/* Just for funnnn*/
-.like-button-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#likeBtn {
-  padding: 12px 25px;
-  border-radius: 12px;
-  border: none;
-  background-color: rgba(80, 130, 255, 0.85); /* plasma-blue */
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-#likeBtn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(80,130,255,0.4);
-  background-color: rgba(80, 130, 255, 1);
-}
-
-#fireworksCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* clicks pass through */
-  z-index: 9999;        /* above page content */
-}
