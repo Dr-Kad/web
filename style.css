@@ -214,6 +214,28 @@ body {
   font-weight: 500;
 }
 
+/* Laser underline effect */
+.nav-links a {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #5ab0ff, #7a4bff);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
 /* Hamburger icon */
 .hamburger {
   display: None;
