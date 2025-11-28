@@ -75,21 +75,23 @@ window.addEventListener("resize", () => {
 
 // Add particle on cursor move
 window.addEventListener("mousemove", (e) => {
-  cursorParticles.push({
-    x: e.clientX,
-    y: e.clientY,
-    alpha: 1,
-    size: Math.random() * 4 + 2,
-    dx: (Math.random() - 0.5) * 1.5,
-    dy: (Math.random() - 0.5) * 1.5
-  });
+  if (Math.random() < 0.25) {  // only 25% of mouse moves add particle , increase lead to more particles on trail
+    cursorParticles.push({
+      x: e.clientX,
+      y: e.clientY,
+      alpha: 1,
+      size: Math.random() * 3 + 1.5,
+      dx: (Math.random() - 0.5) * 1.2,
+      dy: (Math.random() - 0.5) * 1.2
+    });
+  }
 });
 
 function animateCursor() {
   cCtx.clearRect(0, 0, cursorCanvas.width, cursorCanvas.height);
 
   cursorParticles.forEach((p, i) => {
-    p.alpha -= 0.03;
+    p.alpha -= 0.06; // increase the value to fast disappearance of cursor-particles
     p.x += p.dx;
     p.y += p.dy;
 
