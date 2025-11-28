@@ -670,9 +670,9 @@ button:hover::before,
   display: flex;
   gap: 20px;
   padding: 10px;
-  animation: galleryScroll 18s linear infinite;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* optional: snap to each image */
 }
 
 .gallery-track::-webkit-scrollbar {
@@ -710,6 +710,7 @@ button:hover::before,
   transition: 0.2s ease;
   user-select: none;
   backdrop-filter: blur(4px);
+  z-index: 10;
 }
 
 .gallery-arrow:hover {
