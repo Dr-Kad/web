@@ -668,7 +668,7 @@ button:hover::before,
 .gallery-track {
   display: flex;
   gap: 20px;
-  animation: autoScroll 25s linear infinite;
+  /*animation: autoScroll 25s linear infinite;*/
 }
 
 /* Images */
@@ -676,7 +676,7 @@ button:hover::before,
   height: 200px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
+  /*transition: transform 0.3s ease;*/
 }
 
 .gallery-track img:hover {
@@ -684,7 +684,7 @@ button:hover::before,
 }
 
 /* Smooth Auto Scroll */
-@keyframes autoScroll {
+/* @keyframes autoScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-}
+} */
