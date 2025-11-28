@@ -1,26 +1,18 @@
 const track = document.getElementById("galleryTrack");
-const leftArrow = document.querySelector(".left-arrow");
-const rightArrow = document.querySelector(".right-arrow");
 
-const scrollAmount = track.children[0].offsetWidth + 20; // image width + gap
+// Duplicate the images for seamless loop
+track.innerHTML += track.innerHTML;
 
-leftArrow.addEventListener("click", () => {
-    track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-});
+let speed = 0.5; // pixels per frame
+let pos = 0;
 
-rightArrow.addEventListener("click", () => {
-    track.scrollBy({ left: scrollAmount, behavior: "smooth" });
-});
+function animateGallery() {
+  pos -= speed;
+  if (pos <= -track.scrollWidth / 2) {
+    pos = 0; // reset to start seamlessly
+  }
+  track.style.transform = `translateX(${pos}px)`;
+  requestAnimationFrame(animateGallery);
+}
 
-// Optional: auto-scroll
-let autoScroll = setInterval(() => {
-    track.scrollBy({ left: scrollAmount, behavior: "smooth" });
-}, 3000);
-
-// Pause auto-scroll on hover
-track.addEventListener("mouseenter", () => clearInterval(autoScroll));
-track.addEventListener("mouseleave", () => {
-    autoScroll = setInterval(() => {
-        track.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }, 3000);
-});
+animateGallery();
