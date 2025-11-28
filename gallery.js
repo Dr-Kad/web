@@ -1,33 +1,26 @@
-const track = document.querySelector(".slider-track");
-const prevBtn = document.querySelector(".slider-btn.prev");
-const nextBtn = document.querySelector(".slider-btn.next");
+const track = document.getElementById("galleryTrack");
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
 
-let autoScrollActive = true;
-let autoScrollTimer;
+const scrollAmount = track.children[0].offsetWidth + 20; // image width + gap
 
-// Pause auto-scroll
-function pauseAutoScroll() {
-    autoScrollActive = false;
-    track.style.animationPlayState = "paused";
+leftArrow.addEventListener("click", () => {
+    track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+});
 
-    clearTimeout(autoScrollTimer);
-    autoScrollTimer = setTimeout(() => {
-        autoScrollActive = true;
-        track.style.animationPlayState = "running";
-    }, 4000); // resume after 4 seconds
-}
+rightArrow.addEventListener("click", () => {
+    track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+});
 
-// Manual scroll function
-function manualScroll(direction) {
-    pauseAutoScroll();
+// Optional: auto-scroll
+let autoScroll = setInterval(() => {
+    track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+}, 3000);
 
-    const scrollAmount = track.children[0].offsetWidth + 20; // image width + gap
-    track.scrollBy({
-        left: direction === "next" ? scrollAmount : -scrollAmount,
-        behavior: "smooth"
-    });
-}
-
-// Button handlers
-nextBtn.addEventListener("click", () => manualScroll("next"));
-prevBtn.addEventListener("click", () => manualScroll("prev"));
+// Pause auto-scroll on hover
+track.addEventListener("mouseenter", () => clearInterval(autoScroll));
+track.addEventListener("mouseleave", () => {
+    autoScroll = setInterval(() => {
+        track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }, 3000);
+});
