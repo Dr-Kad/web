@@ -657,9 +657,8 @@ button:hover::before,
   color: #000;
 }
 
-/* Wrapper */
+/* Gallery Wrapper */
 .gallery-wrapper {
-  position: relative;
   width: 100%;
   overflow: hidden;
   padding: 20px 0;
@@ -669,14 +668,7 @@ button:hover::before,
 .gallery-track {
   display: flex;
   gap: 20px;
-  padding: 10px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory; /* optional: snap to each image */
-}
-
-.gallery-track::-webkit-scrollbar {
-  display: none;
+  animation: autoScroll 25s linear infinite;
 }
 
 /* Images */
@@ -688,36 +680,11 @@ button:hover::before,
 }
 
 .gallery-track img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* Auto Scroll Animation */
-@keyframes galleryScroll {
+/* Smooth Auto Scroll */
+@keyframes autoScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-
-/* Arrows */
-.gallery-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 45px;
-  color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 50%;
-  transition: 0.2s ease;
-  user-select: none;
-  backdrop-filter: blur(4px);
-  z-index: 10;
-}
-
-.gallery-arrow:hover {
-  color: rgba(0, 0, 0, 0.85);
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.left-arrow { left: 10px; }
-.right-arrow { right: 10px; }
-
