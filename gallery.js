@@ -1,22 +1,33 @@
-const track = document.getElementById("galleryTrack");
-let scrollAmount = 0;
+const track = document.querySelector(".slider-track");
+const prevBtn = document.querySelector(".slider-btn.prev");
+const nextBtn = document.querySelector(".slider-btn.next");
 
-// Pause auto scroll on hover
-track.addEventListener("mouseenter", () => {
-  track.style.animationPlayState = "paused";
-});
-track.addEventListener("mouseleave", () => {
-  track.style.animationPlayState = "running";
-});
+let autoScrollActive = true;
+let autoScrollTimer;
 
-// Manual scroll movement
-function scrollGallery(direction) {
-  scrollAmount += direction * 250; // scroll 250px per click
+// Pause auto-scroll
+function pauseAutoScroll() {
+    autoScrollActive = false;
+    track.style.animationPlayState = "paused";
 
-  track.style.transition = "transform 0.4s ease";
-  track.style.transform = `translateX(${scrollAmount}px)`;
+    clearTimeout(autoScrollTimer);
+    autoScrollTimer = setTimeout(() => {
+        autoScrollActive = true;
+        track.style.animationPlayState = "running";
+    }, 4000); // resume after 4 seconds
 }
 
-// Arrow buttons
-document.querySelector(".left-arrow").onclick = () => scrollGallery(1);
-document.querySelector(".right-arrow").onclick = () => scrollGallery(-1);
+// Manual scroll function
+function manualScroll(direction) {
+    pauseAutoScroll();
+
+    const scrollAmount = track.children[0].offsetWidth + 20; // image width + gap
+    track.scrollBy({
+        left: direction === "next" ? scrollAmount : -scrollAmount,
+        behavior: "smooth"
+    });
+}
+
+// Button handlers
+nextBtn.addEventListener("click", () => manualScroll("next"));
+prevBtn.addEventListener("click", () => manualScroll("prev"));
