@@ -646,3 +646,78 @@ button:hover::before,
   pointer-events: none; /* very important: allows clicks through the canvas */
   z-index: 9999;        /* make sure it's on top */
 }
+
+/* Gallery*/
+/* Gallery Page Title */
+.gallery-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+/* Wrapper */
+.gallery-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+/* Container */
+.gallery-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Image Track */
+.gallery-track {
+  display: flex;
+  gap: 40px;
+  animation: autoScroll 25s linear infinite;
+}
+
+.gallery-track img {
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.gallery-track img:hover {
+  transform: scale(1.1);
+}
+
+/* Auto Scroll Animation */
+@keyframes autoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Arrow Buttons */
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 45px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: 0.2s ease;
+  user-select: none;
+  backdrop-filter: blur(4px);
+}
+
+.gallery-arrow:hover {
+  color: rgba(0, 0, 0, 0.85);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
