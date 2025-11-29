@@ -117,21 +117,26 @@ animateCursor();
 Gallery script
 -----*/
 
-const track = document.getElementById("galleryTrack");
+const track = document.querySelector(".gallery-track");
 
-// Duplicate the images for seamless loop
+// Duplicate images
 track.innerHTML += track.innerHTML;
 
-let speed = 0.5; // pixels per frame
+let speed = 0.5;
 let pos = 0;
 
 function animateGallery() {
   pos -= speed;
-  if (pos <= -track.scrollWidth / 2) {
-    pos = 0; // reset to start seamlessly
+
+  const resetPoint = track.scrollWidth / 2;
+
+  if (Math.abs(pos) >= resetPoint) {
+    pos = 0;
   }
+
   track.style.transform = `translateX(${pos}px)`;
   requestAnimationFrame(animateGallery);
 }
 
 animateGallery();
+
