@@ -668,6 +668,7 @@ button:hover::before,
 .gallery-track {
   display: flex;
   gap: 20px;
+  will-change: transform;
   /*animation: autoScroll 25s linear infinite;*/
 }
 
