@@ -1,28 +1,24 @@
-window.onload = () => {
+function enableAutoScroll(trackId, speed = 0.6) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
 
-  const track = document.getElementById("galleryTrack");
-  if (!track) {
-    console.error("Gallery track not found.");
-    return;
-  }
-
-  // Duplicate images for seamless loop
-  track.innerHTML += track.innerHTML;
+  track.innerHTML += track.innerHTML; // duplicate items
 
   let pos = 0;
-  const speed = 0.6; // pixels per frame
 
-  function scrollGallery() {
+  function scroll() {
     pos -= speed;
-
-    const resetPoint = track.scrollWidth / 2;
-    if (Math.abs(pos) >= resetPoint) {
-      pos = 0;
-    }
-
+    const reset = track.scrollWidth / 2;
+    if (Math.abs(pos) >= reset) pos = 0;
     track.style.transform = `translateX(${pos}px)`;
-    requestAnimationFrame(scrollGallery);
+    requestAnimationFrame(scroll);
   }
 
-  scrollGallery();
+  scroll();
+}
+
+window.onload = () => {
+  enableAutoScroll("labsTrack", 0.6);
+  enableAutoScroll("confTrack", 0.5);
+  enableAutoScroll("awardTrack", 0.7);
 };
