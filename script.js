@@ -111,32 +111,3 @@ function animateCursor() {
 }
 
 animateCursor();
-
-
-/*-----
-Gallery script
------*/
-
-const track = document.querySelector(".gallery-track");
-
-// Duplicate images
-track.innerHTML += track.innerHTML;
-
-let speed = 0.5;
-let pos = 0;
-
-function animateGallery() {
-  pos -= speed;
-
-  const resetPoint = track.scrollWidth / 2;
-
-  if (Math.abs(pos) >= resetPoint) {
-    pos = 0;
-  }
-
-  track.style.transform = `translateX(${pos}px)`;
-  requestAnimationFrame(animateGallery);
-}
-
-animateGallery();
-
