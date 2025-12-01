@@ -689,6 +689,7 @@ button:hover::before,
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 /* Ensure images + captions scroll together */
@@ -706,8 +707,21 @@ button:hover::before,
   text-align: center;
 }
 
-/* Smooth Auto Scroll */
-/* @keyframes autoScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-} */
+.gallery-item .caption {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  transition: 
+    color 0.3s ease,
+    text-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.gallery-item:hover .caption,
+.gallery-item:active .caption {
+  color: #0077ff;
+  text-shadow: 0 0 8px rgba(0, 119, 255, 0.5);
+  transform: translateY(-3px);
+}
+
