@@ -407,6 +407,17 @@ body {
   font-size: 1em;
 }
 
+
+/* Publications-item area */
+.publication-item h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.publication-item p {
+    margin: 4px 0;
+}
+
 /* Small Profile Pic in Navbar */
 .nav-profile-pic {
   width: 32px;
